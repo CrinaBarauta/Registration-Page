@@ -37,21 +37,9 @@
             </script>
 
             <!-- TY Message -->
-            <script>
-                function followUp(e, a, t, i) {
-    if(0==a.indexOf("#"))return $("#download-link").attr("href", i),
-    $(e).slideUp(),
-    $("#marketo-ty").slideDown(),
-    1==$(".mForm").length&&$("html, body").animate( {
-        scrollTop: $(e).offset().top-50
-    }
-    , 1e3),
-    !1;
-    var r=new Date((new Date).getTime()+36e5);
-    document.cookie=t+"="+i+"; path=/; expires="+r,
-    location.href=a
-}
-            </script>
+            <script src="gen_validatorv4.js" type="text/javascript"></script>
+
+
 </head>
 
 
@@ -92,16 +80,16 @@
             </section>
             <section class="header-flex__item form__position">
                 <div id="toForm" class="form-wrapper z-index-10">
-                    <form class="mForm mForm--white">
+                    <form class="mForm mForm--white" id="myform">
                         <h2 class="mForm__title content__h4">Register to&nbsp;download</h2>
                         <div class="mForm__row">
-                            <input type="text" name="first_name" placeholder="First name*" value="" maxlength="40" minlength="3" required=""/>
+                            <input type="text" name="first_name" placeholder="First name*" value="" id="firstName"/>
                         </div>
                         <div class="mForm__row">
-                            <input type="text" name="last_name" placeholder="Last name*" value="" maxlength="40" minlength="3" required=""/>
+                            <input type="text" name="last_name" placeholder="Last name*" value="" id="LastName"/>
                         </div>
                         <div class="mForm__row">
-                            <input type="text" name="email" placeholder="Business email*" value="" maxlength="80" required=""/>
+                            <input type="text" name="email" placeholder="Business email*" value="" id="EMail"/>
                         </div>
                         <div class="mForm__policy"><div class="mForm__row"><input class="mForm__row-checkbox" type="checkbox" name="subscribe" id="subscribe0" value=""><label class="mForm__row-checkbox" for="subscribe0">I want to receive product news and&nbsp;updates.</label></div></div>
                         <div class="mForm__policy"><div class="mForm__row"><label class="private_policy_label">By registering you agree to the&nbsp;<a href="#" target="_blank">Privacy Policy</a>.</label></div></div>
@@ -109,6 +97,21 @@
                         <input type="hidden" name="ty" value="#" />
                         <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit">DOWNLOAD NOW</span></button>
                     </form>
+
+                    <script  type="text/javascript">
+                        var frmvalidator = new Validator("myform");
+                        frmvalidator.addValidation("firstName","req",);
+                        frmvalidator.addValidation("firstName","maxlen=20",
+                               "Max length for this fiels is 20");
+                        
+                        frmvalidator.addValidation("LastName","req");
+                        frmvalidator.addValidation("LastName","maxlen=20");
+                        
+                        frmvalidator.addValidation("Email","maxlen=50");
+                        frmvalidator.addValidation("Email","req");
+                        frmvalidator.addValidation("Email","email");
+                       </script>
+                       
 
                     <div id="marketo-ty" class="success">
                             <h2 class="success__text">Thank you for&nbsp;your interest!</h2>
