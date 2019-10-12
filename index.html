@@ -35,6 +35,23 @@
               });
             });
             </script>
+
+            <!-- TY Message -->
+            <script>
+                function followUp(e, a, t, i) {
+    if(0==a.indexOf("#"))return $("#download-link").attr("href", i),
+    $(e).slideUp(),
+    $("#marketo-ty").slideDown(),
+    1==$(".mForm").length&&$("html, body").animate( {
+        scrollTop: $(e).offset().top-50
+    }
+    , 1e3),
+    !1;
+    var r=new Date((new Date).getTime()+36e5);
+    document.cookie=t+"="+i+"; path=/; expires="+r,
+    location.href=a
+}
+            </script>
 </head>
 
 
@@ -92,6 +109,13 @@
                         <input type="hidden" name="ty" value="#" />
                         <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit">DOWNLOAD NOW</span></button>
                     </form>
+
+                    <div id="marketo-ty" class="success">
+                            <h2 class="success__text">Thank you for&nbsp;your interest!</h2>
+                            <div class="g-dark-block text_center">
+                                <a class="g-cta__btn-primary js-g-scroll" id="download-link" href="https://www.veeam.com/five_key_factors_consider_hci_data_protection_wpp.pdf" target="_blank">Download now</a>
+                            </div>
+                        </div>
 
                 </div>
             </section>
