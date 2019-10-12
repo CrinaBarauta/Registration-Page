@@ -53,21 +53,32 @@
                     <form class="mForm mForm--white">
                         <h2 class="mForm__title content__h4">Register to&nbsp;download</h2>
                         <div class="mForm__row">
-                            <input type="text" name="first_name" placeholder="First name*" value="" data-validators="required,name" progressive-profiling="true" />
+                            <input type="text" name="first_name" placeholder="First name*" value="" class="first_name" />
                         </div>
-                        <div class="mForm__row">
-                            <input type="text" name="last_name" placeholder="Last name*" value="" data-validators="required,name" progressive-profiling="true" />
-                        </div>
-                        <div class="mForm__row">
-                            <input type="text" name="email" placeholder="Business email*" value="" data-validators="required,email,business" />
-                        </div>
+                        <div class="status-first-name">
 
-                        <div class="mForm__policy"><div class="mForm__row"><input class="mForm__row-checkbox" type="checkbox" name="subscribe" id="subscribe0" value=""><label class="mForm__row-checkbox" for="subscribe0">I want to receive product news and&nbsp;updates.</label></div></div>
+                            </div>
+                        <div class="mForm__row">
+                            <input type="text" name="last_name" placeholder="Last name*" value="" class="last_name"  />
+                        </div>
+                        <div class="status-last-name">
+
+                            </div>
+                        <div class="mForm__row">
+                            <input type="text" name="email" placeholder="Business email*" value="" class="email" />
+                        </div>
+                        <div class="status-email">
+
+                            </div>
+
+                        <div class="mForm__policy"><div class="mForm__row"><input class="mForm__row-checkbox" type="checkbox" name="subscribe" class="subscribe" value=""><label class="mForm__row-checkbox" for="subscribe0">I want to receive product news and&nbsp;updates.</label></div></div>
 
                         <div class="mForm__policy"><div class="mForm__row"><label class="private_policy_label">By registering you agree to the&nbsp;<a href="#" target="_blank">Privacy Policy</a>.</label></div></div>
 
+                        
+
                         <input type="hidden" name="ty" value="#" />
-                        <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit">DOWNLOAD NOW</span></button>
+                        <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" class="submit">DOWNLOAD NOW</span></button>
                     </form>
 
                     <div id="marketo-ty" class="success">
@@ -192,19 +203,35 @@
 
 <!-- Scripts for form -->
 <script>
-    function followUp(e, a, t, i) {
-    if(0==a.indexOf("#"))return $("#download-link").attr("href", i),
-    $(e).slideUp(),
-    $("#marketo-ty").slideDown(),
-    1==$(".mForm").length&&$("html, body").animate( {
-        scrollTop: $(e).offset().top-50
-    }
-    , 1e3),
-    !1;
-    var r=new Date((new Date).getTime()+36e5);
-    document.cookie=t+"="+i+"; path=/; expires="+r,
-    location.href=a
-}
+    $(document).ready(function() {
+        $('.submit').click (function (event) {
+            event.preventDefault ()
+
+            var firstName = $ ('.first_name').val()
+            var lastName = $ ('.last_name').val()
+            var email = $ ('.emal').val()
+            var statusEn = $ ('.status-email')
+            statusEn.empty()
+            var statusFn = $ ('.status-first-name')
+            statusFn.empty()
+            var statusLn = $ ('.status-last-namel')
+            statusLn.empty()
+
+            if (first-name.length < 2 ) {
+                statusFn.append('<div>First name is not valid</div>')
+            } 
+
+            if (last-name.length < 2 ) {
+                statusLn.append('<div>Last name is not valid</div>')
+            } 
+
+            if (email.length > 5 && email.includes('@') && email.includes('.')) {
+            } else {
+                statusEn.append('<div>Email is not valid</div>')
+            }
+
+        })
+    })
 </script>
 
     <!--CONTENT E-->
