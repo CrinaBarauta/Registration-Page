@@ -41,7 +41,8 @@
 box-sizing: border-box;
 padding: 50px 15px 60px;
 color: #fff;
-background: #0A193F;
+background-image: linear-gradient(to right bottom, rgb(30, 115, 172), rgba(142, 57, 153, 0.6)), url(https://media.giphy.com/media/3o7TKolyPUm9BhVwiY/giphy.gif);
+background-size: cover;
 position: relative;
 left: 0;
 top: 0;
@@ -95,7 +96,7 @@ header a {
 .header-flex .header-flex__item:last-child:after {
     content: "";
     position: fixed;
-    background: #0B1838;
+    background: #0b183885;
     width: 100%;
     height: 100%;
     top: 0;
@@ -131,8 +132,8 @@ header a {
         margin-right: 0;
         padding: 30px 15px 30px;
         flex-basis: 100%;
-        background: #0A193F;
-        background-size: contain;
+        background-image: linear-gradient(to right bottom, rgb(30, 115, 172), rgba(142, 57, 153, 0.6)), url(https://media.giphy.com/media/3o7TKolyPUm9BhVwiY/giphy.gif);
+        background-size: cover;
     }
     .header-flex .header-flex__item:first-child,
     .header-flex .header-flex__item:first-child * {
@@ -142,7 +143,7 @@ header a {
 
     .header-flex .header-flex__item:last-child {
         display: block;
-        background: #0B1838;
+        background: #0b183885;
         flex-basis: -moz-calc(100% + 30px);
         flex-basis: -webkit-calc(100% + 30px);
         flex-basis: calc(100% + 30px);
@@ -232,7 +233,8 @@ header a {
         text-align: center;
         padding: 30px 15px 0px;
         padding-bottom: 0px;
-        background: #0A193F;
+        background-image: linear-gradient(to right bottom, rgb(30, 115, 172), rgba(142, 57, 153, 0.6)), url(https://media.giphy.com/media/3o7TKolyPUm9BhVwiY/giphy.gif);
+        background-size: cover;
     }
 
     .header-flex .header-flex__item:first-child:after {
