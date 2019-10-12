@@ -105,7 +105,7 @@ $(document).on("callSuccessSubmitForm", function(e, a) {
         case"resource_access": var o=a.data.resourceUrl;
         followUp(t, n, "resource_url", o);
         break;
-        case"lic_gen": case"no_lic_public": case"no_lic_gen": case"lic_gen_public": case"no_lic_gen_public": var n, s="#"+a.data.productUrl;
+        case"lic_gen": case"no_lic_public": case"no_lic_gen": case"lic_gen_public": case"no_lic_gen_public": var n;
         followUp(t, n=n+r+"products="+a.data.products+"&key_type="+a.data.key_type, "prd_dnl", s);
         break;
         default: followUp(t, n, "resource_url", o)
@@ -114,13 +114,6 @@ $(document).on("callSuccessSubmitForm", function(e, a) {
         email: $.trim($('[name="email"]').val()), action: "e"
     }
     ;
-    $.ajax( {
-        url:"#", type:"post", data:JSON.stringify(l), success:function(e) {
-            var a=JSON.parse(e);
-            document.cookie="pr-pr="+a.result+"; expires=Thu, 31 Dec 2020 12:00:00 UTC; path=/"
-        }
-    }
-    )
 }
 
 ),
