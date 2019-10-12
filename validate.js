@@ -117,7 +117,7 @@ Validator.utils = function(a) {
     init: function(a) {
         function b() {
             var a = window.location.host.split(".");
-            return 3 === a.length && (-1 !== a.indexOf("staging") || -1 !== a.indexOf("staging2")) || "local" === a.pop() && -1 !== a.indexOf("veeam") && -1 === a.indexOf("my") ? "" : "https://www.veeam.com"
+            return 3 === a.length && (-1 !== a.indexOf("staging") || -1 !== a.indexOf("staging2")) || "local" === a.pop() && -1 !== a.indexOf("") && -1 === a.indexOf("my") ? "" : "#"
         }
         var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$",
             d = {
