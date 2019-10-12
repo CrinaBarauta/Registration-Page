@@ -52,17 +52,17 @@
                     <form class="mForm mForm--white">
                         <h2 class="mForm__title content__h4">Register to&nbsp;download</h2>
                         <div class="mForm__row">
-                            <input type="text" name="first_name" placeholder="First name*" value="" data-validators="required,name" progressive-profiling="true" />
+                            <input type="text" name="first_name" placeholder="First name*" value="" maxlength="40" minlength="3" required=""/>
                         </div>
                         <div class="mForm__row">
-                            <input type="text" name="last_name" placeholder="Last name*" value="" data-validators="required,name" progressive-profiling="true" />
+                            <input type="text" name="last_name" placeholder="Last name*" value="" maxlength="40" minlength="3" required=""/>
                         </div>
                         <div class="mForm__row">
-                            <input type="text" name="email" placeholder="Business email*" value="" data-validators="required,email,business" />
+                            <input type="text" name="email" placeholder="Business email*" value="" maxlength="80" required=""/>
                         </div>
+                        <div class="mForm__policy"><div class="mForm__row"><input class="mForm__row-checkbox" type="checkbox" name="subscribe" id="subscribe0" value=""><label class="mForm__row-checkbox" for="subscribe0">I want to receive product news and&nbsp;updates.</label></div></div>
+                        <div class="mForm__policy"><div class="mForm__row"><label class="private_policy_label">By registering you agree to the&nbsp;<a href="#" target="_blank">Privacy Policy</a>.</label></div></div>
 
-
-                        <input type="hidden" name="form_type" value="resource_access" />
                         <input type="hidden" name="ty" value="#" />
                         <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit">DOWNLOAD NOW</span></button>
                     </form>
@@ -185,12 +185,6 @@
     </div>
 </footer>
 
-
-
-<!-- Scripts for form -->
-<!-- <script src='validate.js'></script> -->
-<script src="marketo.js"></script>
-<!-- <script src="response.js"></script> -->
 
     <!--CONTENT E-->
 
