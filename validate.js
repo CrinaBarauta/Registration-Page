@@ -119,7 +119,26 @@ Validator.utils = function(a) {
             var a = window.location.host.split(".");
             return 3 === a.length && (-1 !== a.indexOf("staging") || -1 !== a.indexOf("staging2")) || "local" === a.pop() && -1 !== a.indexOf("veeam") && -1 === a.indexOf("my") ? "" : "https://www.veeam.com"
         }
-        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$";
+        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$",
+            d = {
+                beforeAjax: c,
+                ajax: {
+                    url: b() + "/api/validator/is-not-disposable-email",
+                    param: "email"
+                }
+            },
+            e = {
+                ajax: {
+                    url: b() + "/api/validator/business-email",
+                    param: "email"
+                }
+            },
+            f = {
+                ajax: {
+                    url: b() + "/api/validator/phone",
+                    param: "phone"
+                }
+            };
         this.addRules({
             required: function(b, c, d, e) {
                 var f = d.name || "",
@@ -131,8 +150,19 @@ Validator.utils = function(a) {
                 }
                 return new RegExp("^(?!is+\\srequired)(\\S)", "i").test(h.trim())
             },
+            email: d,
+            emailoptional: {
+                pattern: "(" + c + ")|^$"
+            },
             phone: f,
             business: e,
+            emailnotexists: {
+                ajax: {
+                    url: b() + "/api/validator/email-not-exists",
+                    param: "email"
+                }
+            },
+            companyRequiredForBusinessEmail: e,
             name: {
                 pattern: "^([\\d\\sa-zA-Z_\\.'!-]*)([a-zA-Z]+)([\\d\\sa-zA-Z_\\.'!-]*)$"
             },
