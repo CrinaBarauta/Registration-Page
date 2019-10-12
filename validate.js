@@ -119,28 +119,9 @@ Validator.utils = function(a) {
             var a = window.location.host.split(".");
             return 3 === a.length && (-1 !== a.indexOf("staging") || -1 !== a.indexOf("staging2")) || "local" === a.pop() && -1 !== a.indexOf("") && -1 === a.indexOf("my") ? "" : "#"
         }
-        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$",
-            d = {
-                beforeAjax: c,
-                ajax: {
-                    url: b() + "/api/validator/is-not-disposable-email",
-                    param: "email"
-                }
-            },
-            e = {
-                ajax: {
-                    url: b() + "/api/validator/business-email",
-                    param: "email"
-                }
-            },
-            f = {
-                ajax: {
-                    url: b() + "/api/validator/phone",
-                    param: "phone"
-                }
-            };
+        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$";
         this.addRules({
-            required: function(b, c, d, e) {
+            required: function(b) {
                 var f = d.name || "",
                     g = d.type,
                     h = d.value;
@@ -156,12 +137,6 @@ Validator.utils = function(a) {
             },
             phone: f,
             business: e,
-            emailnotexists: {
-                ajax: {
-                    url: b() + "/api/validator/email-not-exists",
-                    param: "email"
-                }
-            },
             companyRequiredForBusinessEmail: e,
             name: {
                 pattern: "^([\\d\\sa-zA-Z_\\.'!-]*)([a-zA-Z]+)([\\d\\sa-zA-Z_\\.'!-]*)$"
