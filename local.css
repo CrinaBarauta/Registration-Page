@@ -22,10 +22,8 @@
 
 /* HEADER -- S*/
 
-.idc__logo {
-    width: 151px;
-    height: 47px;
-    padding-top: 5px;
+img.logo_lp, {
+    height: 43px !important;
 }
 
 .preheader__table .preheader__td:last-child {
