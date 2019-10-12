@@ -202,38 +202,9 @@
 
 
 <!-- Scripts for form -->
-<script>
-    $(document).ready(function() {
-        $('.submit').click (function (event) {
-            event.preventDefault ()
-
-            var firstName = $ ('.first_name').val()
-            var lastName = $ ('.last_name').val()
-            var email = $ ('.emal').val()
-            var statusEn = $ ('.status-email')
-            statusEn.empty()
-            var statusFn = $ ('.status-first-name')
-            statusFn.empty()
-            var statusLn = $ ('.status-last-namel')
-            statusLn.empty()
-
-            if (first-name.length < 2 ) {
-                statusFn.append('<div>First name is not valid</div>')
-            } 
-
-            if (last-name.length < 2 ) {
-                statusLn.append('<div>Last name is not valid</div>')
-            } 
-
-            if (email.length > 5 && email.includes('@') && email.includes('.')) {
-            } else {
-                statusEn.append('<div>Email is not valid</div>')
-            }
-
-        })
-    })
-</script>
-
+<script src='https://js.veeam.com/min/form-validate.min.js'></script>
+<script src="https://js.veeam.com/min/marketo-form.min.js"></script>
+<script src="https://psr.veeam.com/global/js/form-response.js?v20190424"></script>
     <!--CONTENT E-->
 
 
