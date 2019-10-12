@@ -1,0 +1,549 @@
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit
+}
+
+.mForm {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center
+}
+
+.mForm__row {
+    position: relative;
+    margin-bottom: 18px
+}
+
+.mForm__row label {
+    text-align: left
+}
+
+.mForm__row input[type=text],
+.mForm__row input[type=url],
+.mForm__row input[type=email],
+.mForm__row input[type=tel],
+.mForm__row input[type=number],
+.mForm__row input[type=date],
+.mForm__row textarea,
+.mForm__row select {
+    box-sizing: border-box;
+    padding: 0 14px !important;
+    height: 48px;
+    width: 100%;
+    line-height: normal;
+    font-size: 16px;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: border ease-out .3s, color ease-out .3s, background-color ease-out .3s
+}
+
+.mForm__row input[type=text]:hover,
+.mForm__row input[type=url]:hover,
+.mForm__row input[type=email]:hover,
+.mForm__row input[type=tel]:hover,
+.mForm__row input[type=number]:hover,
+.mForm__row input[type=date]:hover,
+.mForm__row textarea:hover,
+.mForm__row select:hover {
+    border: 1px solid #004550
+}
+
+.mForm__row textarea {
+    padding: 15px 18px !important;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 48px
+}
+
+@supports (-ms-ime-align:auto) {
+    .mForm__row select[name="country"] {
+        padding-top: 14px !important
+    }
+}
+
+.mForm__row input[type=text]:focus,
+.mForm__row input[type=url]:focus,
+.mForm__row input[type=email]:focus,
+.mForm__row input[type=tel]:focus,
+.mForm__row input[type=number]:focus,
+.mForm__row input[type=date]:focus,
+.mForm__row textarea:focus,
+.mForm__row select:focus {
+    color: #232323;
+    outline: none;
+    border: 1px solid #00B336
+}
+
+.mForm__row select {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    -ms-appearance: none;
+    appearance: none !important;
+    padding-right: 40px !important;
+    background-image: url('https://psr.veeam.com/global/img/icon/arrow_select_999999.svg');
+    background-position: 96% center;
+    background-position: calc(100% - 14px) center;
+    background-repeat: no-repeat;
+    background-size: 8px
+}
+
+.mForm__row select::-ms-expand {
+    display: none
+}
+
+.mForm__row select:hover {
+    background-image: url('https://psr.veeam.com/global/img/icon/arrow_select_005f4b.svg')
+}
+
+.mForm__row select:focus {
+    background-image: url('https://psr.veeam.com/global/img/icon/arrow_select_00b336.svg')
+}
+
+.mForm__row input.mForm__row-checkbox {
+    display: none
+}
+
+.mForm__row label.mForm__row-checkbox::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    background-size: 11px;
+    border: 1px solid #999999;
+    cursor: pointer;
+    transition: border ease-out .3s
+}
+
+.mForm__row label.mForm__row-checkbox:hover::before {
+    border: 1px solid #005F4B
+}
+
+.mForm__row input.mForm__row-checkbox:checked + label.mForm__row-checkbox::before {
+    background: #fff url('https://psr.veeam.com/global/img/icon/checkbox_checked_00b336.svg') no-repeat center center;
+    border: 1px solid #00B336
+}
+
+.mForm__row input.mForm__row-checkbox:checked:not(:disabled) + label.mForm__row-checkbox:hover::before {
+    background: #fff url('https://psr.veeam.com/global/img/icon/checkbox_checked_005f4b.svg') no-repeat center center;
+    border: 1px solid #005F4B
+}
+
+.mForm__row input.mForm__row-checkbox[disabled] + label.mForm__row-checkbox::before {
+    border: 1px solid #CDCDCD;
+    background: #F1F1F1;
+    cursor: no-drop
+}
+
+.mForm__row input.mForm__row-checkbox[disabled]:checked + label.mForm__row-checkbox::before {
+    background: #f1f1f1 url('https://psr.veeam.com/global/img/icon/checkbox_checked_cdcdcd.svg') no-repeat center center
+}
+
+.mForm__row label.mForm__row-checkbox {
+    display: block;
+    padding-left: 36px;
+    font-size: 16px
+}
+
+.mForm__row input.mForm__row-radio {
+    display: none
+}
+
+.mForm__row label.mForm__row-radio::before {
+    position: absolute;
+    content: '';
+    top: 1px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(https://psr.veeam.com/global/img/icon/hybrid_form_controls.png?v20181912) no-repeat 0 -84px;
+    cursor: pointer;
+    z-index: 1
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .mForm__row label.mForm__row-radio::before {
+        background: url(https://psr.veeam.com/global/img/icon/hybrid_form_controls_2x.png?v20181912) no-repeat 0 -84px;
+        background-size: 20px
+    }
+}
+
+.mForm__row label.mForm__row-radio:hover::before {
+    background-position: 0 -63px
+}
+
+.mForm__row input.mForm__row-radio:checked + label.mForm__row-radio::before {
+    background-position: 0 -21px
+}
+
+.mForm__row input.mForm__row-radio:checked + label.mForm__row-radio:hover::before {
+    background-position: 0 0
+}
+
+.mForm__row input.mForm__row-radio[disabled] + label.mForm__row-radio::before {
+    background-position: 0 -105px;
+    cursor: no-drop
+}
+
+.mForm__row input.mForm__row-radio[disabled]:checked + label.mForm__row-radio::before {
+    background-position: 0 -42px;
+    cursor: no-drop
+}
+
+.mForm__row label.mForm__row-radio {
+    display: block;
+    padding-left: 36px;
+    font-size: 16px
+}
+
+.mForm__error {
+    position: relative;
+    margin-top: 8px;
+    padding: 0;
+    color: #BA0200;
+    font-size: 15px;
+    text-align: left;
+    background: none;
+    border: 0 none;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp
+}
+
+.mForm__error::after {
+    display: none
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.mForm__row input[type=text].invalid-field,
+.mForm__row input[type=url].invalid-field,
+.mForm__row input[type=email].invalid-field,
+.mForm__row input[type=tel].invalid-field,
+.mForm__row input[type=number].invalid-field,
+.mForm__row input[type=date].invalid-field,
+.mForm__row textarea.invalid-field,
+.mForm__row select.invalid-field,
+.mForm__row input[type=checkbox].invalid-field + label.mForm__row-checkbox::before {
+    border: 1px solid #BA0200;
+    transition: transform ease-out .3s
+}
+
+.mForm__row select.invalid-field {
+    background-image: url('https://psr.veeam.com/global/img/icon/arrow_select_ba0200.svg')
+}
+
+.mForm button:disabled {
+    opacity: .5
+}
+
+.mForm__btn-green,
+.mForm__btn-green-border,
+.mForm__btn-red,
+.mForm__btn-red-outline,
+.mForm__btn-green-light {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px 10px;
+    min-width: 250px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 0 none;
+    outline: none;
+    background: #00b336;
+    border-radius: 99999px;
+    cursor: pointer;
+    transition: background .15s ease-in-out
+}
+
+.mForm .mForm__btn-green,
+.mForm .mForm__btn-red {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.mForm__btn-green:hover,
+.mForm__btn-green-border:hover,
+.mForm__btn-red:hover,
+.mForm__btn-red-outline:hover {
+    background: #00c73c;
+    text-decoration: none
+}
+
+.mForm__btn-green:active {
+    background: #009E30
+}
+
+.mForm__btn-green:disabled {
+    opacity: 1 !important;
+    background: #CDCDCD
+}
+
+.mForm__btn-red {
+    background: #ba0200
+}
+
+.mForm__btn-red:hover {
+    background: #a50200
+}
+
+.mForm__btn-green-light {
+    color: #005F4B;
+    background: #93EA20
+}
+
+.mForm__btn-green-light:hover {
+    background: #A0FF23
+}
+
+.mForm__btn-green-light:active {
+    background: #83D11D
+}
+
+.mForm__oneLine {
+    margin: 0 auto 18px;
+    max-width: 550px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    text-align: center
+}
+
+.mForm__oneLine-item {
+    flex-basis: 100px;
+    -webkit-flex-grow: 3;
+    flex-grow: 1
+}
+
+.mForm__oneLine .mForm__oneLine-item:first-child {
+    -webkit-flex-grow: 2;
+    flex-grow: 2;
+    z-index: 2
+}
+
+.mForm__oneLine .mForm__oneLine-item:last-child {
+    margin-left: -1px;
+    z-index: 3
+}
+
+.mForm__oneLine .mForm__oneLine-item:nth-child(2) {
+    margin-left: -1px;
+    z-index: 1
+}
+
+.mForm__oneLine .mForm__oneLine-item:last-child {
+    margin-left: 12px
+}
+
+.mForm__oneLine .mForm__row,
+.mForm__oneLine .mForm__btn-green,
+.mForm__oneLine .mForm__btn-green-light {
+    margin: 0
+}
+
+.mForm__oneLine .mForm__btn-green,
+.mForm__oneLine .mForm__btn-green-light {
+    padding: 0 10px !important;
+    min-width: auto;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden
+}
+
+.mForm__oneLine .mForm__policy .mForm__row {
+    margin-bottom: 15px
+}
+
+.mForm__oneLine .mForm__row input[type=text],
+.mForm__oneLine .mForm__row input[type=url],
+.mForm__oneLine .mForm__row input[type=email],
+.mForm__oneLine .mForm__row input[type=tel],
+.mForm__oneLine .mForm__row input[type=number],
+.mForm__oneLine .mForm__row input[type=date],
+.mForm__oneLine .mForm__row textarea,
+.mForm__oneLine .mForm__row select,
+.mForm__oneLine .mForm__btn-green,
+.mForm__oneLine .mForm__btn-green-light {
+    width: 100%
+}
+
+@supports (-ms-ime-align:auto) {
+    .mForm__oneLine .mForm__row select[name="country"] {
+        padding-top: 14px !important
+    }
+}
+
+.mForm__oneLine .mForm__row select {
+    padding-right: 40px !important
+}
+
+@media screen and (max-width: 768px) {
+    .mForm__oneLine {
+        margin-top: -10px;
+        flex-wrap: wrap
+    }
+    .mForm__oneLine-item {
+        flex-basis: 200px;
+        margin: 8px 0;
+        -webkit-flex-grow: 1 !important;
+        flex-grow: 1 !important
+    }
+    .mForm__oneLine .mForm__oneLine-item:last-child {
+        margin-left: 0
+    }
+}
+
+.mForm .mForm__policy {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #58595b
+}
+
+.mForm .mForm__policy p {
+    margin-bottom: 15px
+}
+
+.mForm .mForm__policy p:last-child {
+    margin-bottom: 0
+}
+
+.mForm .mForm__policy a {
+    white-space: nowrap
+}
+
+.mForm .mForm__policy .mForm__row label.mForm__row-checkbox {
+    font-size: 13px
+}
+
+.mForm--white .mForm__row input[type=text],
+.mForm--white .mForm__row input[type=url],
+.mForm--white .mForm__row input[type=email],
+.mForm--white .mForm__row input[type=tel],
+.mForm--white .mForm__row input[type=number],
+.mForm--white .mForm__row input[type=date],
+.mForm--white .mForm__row textarea,
+.mForm--white .mForm__row select {
+    border: solid 1px #999
+}
+
+.mForm--white .mForm__row input[type=text]:focus,
+.mForm--white .mForm__row input[type=url]:focus,
+.mForm--white .mForm__row input[type=email]:focus,
+.mForm--white .mForm__row input[type=tel]:focus,
+.mForm--white .mForm__row input[type=number]:focus,
+.mForm--white .mForm__row input[type=date]:focus,
+.mForm--white .mForm__row textarea:focus,
+.mForm--white .mForm__row select:focus {
+    border: solid 1px #005F4B
+}
+
+.mForm--white .mForm__row label.mForm__row-checkbox {
+    color: #fff
+}
+
+.mForm--white .mForm__row label.mForm__row-checkbox::before {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, .5)
+}
+
+.mForm--white .mForm__row label.mForm__row-checkbox:hover::before {
+    border: 1px solid rgba(255, 255, 255, .7)
+}
+
+.mForm--white .mForm__row input.mForm__row-checkbox:checked + label.mForm__row-checkbox::before,
+.mForm--white .mForm__row input.mForm__row-checkbox:checked:not(:disabled) + label.mForm__row-checkbox:hover::before {
+    background: transparent url('https://psr.veeam.com/global/img/icon/checkbox_checked_93ea20.svg') no-repeat center center;
+    border: 1px solid #fff
+}
+
+.mForm--white .mForm__row input.mForm__row-checkbox[disabled] + label.mForm__row-checkbox::before {
+    border: 1px solid #B0B0B2;
+    background: rgba(176, 176, 178, .7)
+}
+
+.mForm--white .mForm__row input.mForm__row-checkbox[disabled]:checked + label.mForm__row-checkbox::before {
+    background: rgba(176, 176, 178, .7) url('https://psr.veeam.com/global/img/icon/checkbox_checked_93ea20.svg') no-repeat center center
+}
+
+.mForm--white .mForm__row label.mForm__row-radio {
+    color: #fff
+}
+
+.mForm--white .mForm__error {
+    color: #FF8080
+}
+
+.mForm--white .mForm__row input[type=text].invalid-field,
+.mForm--white .mForm__row input[type=url].invalid-field,
+.mForm--white .mForm__row input[type=email].invalid-field,
+.mForm--white .mForm__row input[type=tel].invalid-field,
+.mForm--white .mForm__row input[type=number].invalid-field,
+.mForm--white .mForm__row input[type=date].invalid-field,
+.mForm--white .mForm__row textarea.invalid-field,
+.mForm--white .mForm__row select.invalid-field,
+.mForm__row input[type=checkbox].invalid-field + label.mForm__row-checkbox::before {
+    border: 1px solid #FF8080
+}
+
+.mForm--white .mForm__row select.invalid-field {
+    background-image: url('https://psr.veeam.com/global/img/icon/arrow_select_ff8080.svg')
+}
+
+.mForm--white .mForm__policy {
+    color: #fff
+}
+
+.mForm--white .mForm__policy a {
+    color: #93EA20
+}
