@@ -21,9 +21,9 @@
 }
 
 /* HEADER -- S*/
-
-img.logo_lp, {
+.logo_lp {
     height: 43px !important;
+    width: auto !important;
 }
 
 .preheader__table .preheader__td:last-child {
