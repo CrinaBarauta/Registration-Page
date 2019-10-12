@@ -1,0 +1,869 @@
+@import url(GuardianSans.min.css);
+@import url(font-awesome.min.css);
+html,
+body,
+#bodyId,
+div,
+table,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+img,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    min-width: 310px;
+    font: normal 16px/1.5 'Guardian TextSans Cy', 'Guardian TextSans', Tahoma, sans-serif;
+    color: #232323
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Guardian Sans Cy', 'Guardian Sans', Tahoma, sans-serif;
+    font-weight: 500;
+    line-height: 1.3
+}
+
+div#outerWrapDiv {
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+
+div#innerWrapDiv {
+    position: relative
+}
+
+.lpeCElement {
+    position: static !important
+}
+
+a {
+    color: #00B336;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+img {
+    border: 0 none
+}
+
+@media screen and (max-width: 768px) {
+    .hide768 {
+        display: none
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hide480 {
+        display: none !important
+    }
+}
+
+.page_loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff;
+    z-index: 99999999
+}
+
+.page_loader:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    border-top: 5px solid rgba(0, 179, 54, 1);
+    border-right: 5px solid rgba(0, 179, 54, 1);
+    border-bottom: 5px solid rgba(0, 179, 54, 1);
+    border-left: 5px solid rgba(0, 179, 54, 0);
+    border-radius: 50%;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation: pageLoader 1.1s infinite linear;
+    animation: pageLoader 1.1s infinite linear
+}
+
+@-webkit-keyframes pageLoader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes pageLoader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.cookie_messaging {
+    box-sizing: border-box;
+    position: relative;
+    padding: 25px 15px;
+    background: #f1f1f1;
+    z-index: 99999999
+}
+
+.cookie_messaging__container {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px
+}
+
+.cookie_messaging__message {
+    padding-right: 30px
+}
+
+.cookie_messaging__message p {
+    margin: 0 0 10px;
+    font-size: inherit
+}
+
+.cookie_messaging__message p:last-child {
+    margin-bottom: 0
+}
+
+.cookie_messaging__message b {
+    font-size: 19px;
+    font-weight: 700
+}
+
+.cookie_messaging__button {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 360px;
+    padding: 0 32px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+    background: #00b336;
+    transition: background .15s ease-in-out;
+    border: 0;
+    outline: 0;
+    border-radius: 24px;
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+_:-ms-fullscreen,
+:root .cookie_messaging__button {
+    min-width: 220px
+}
+
+.cookie_messaging__button:hover {
+    background: #00c73c
+}
+
+.cookie_messaging__button:active {
+    background: #009E30
+}
+
+@media screen and (max-width: 1023px) {
+    .cookie_messaging {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.6)
+    }
+    .cookie_messaging__container {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 25px 15px;
+        background: #f1f1f1;
+        z-index: 9999999
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cookie_messaging__container {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+    .cookie_messaging__message {
+        flex-basis: 100%;
+        padding-right: 0;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 15px
+    }
+    .cookie_messaging__message b {
+        font-size: 17px
+    }
+    .cookie_messaging__button {
+        min-width: 256px
+    }
+}
+
+.preheader {
+    box-sizing: border-box;
+    padding: 20px 15px 15px;
+    background: #fff;
+    border-bottom: solid 6px #005F4B
+}
+
+.preheader__table {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px
+}
+
+.preheader__table .preheader__td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left
+}
+
+.preheader__table .preheader__td:last-child {
+    text-align: right
+}
+
+@media screen and (max-width: 1180px) {
+    .preheader {
+        padding: 15px 15px 15px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .preheader {
+        padding: 15px 15px 10px
+    }
+}
+
+img.veeam_logo_lp,
+img.veeam_logo_slogan_lp {
+    width: 188.23px;
+    height: 33px
+}
+
+img.slogan_lp,
+img.n1_veeam {
+    width: 202.11px;
+    height: 34px
+}
+
+img.n1_o365 {
+    width: 220px;
+    height: 38.76px
+}
+
+img.veeam_propartner_logo_lp {
+    width: 114.31px;
+    height: 50px
+}
+
+img.vcsp_logo,
+img.vcsp_slogan_logo {
+    width: 277.09px;
+    height: 28px
+}
+
+img.veeam_live_whiteboard_lp {
+    width: 180.98px;
+    height: 50px
+}
+
+img.vug_logo {
+    width: 180.5px;
+    height: 50px
+}
+
+img.veeam_analyst_summit {
+    width: 220px;
+    height: 42.05px
+}
+
+img.logo_veeam_alliance_partner_program {
+    width: 119.20px;
+    height: 60px
+}
+
+img.alliances_logo_lp,
+img.alliance_logo_cisco_lp,
+img.alliance_logo_dellemc_lp,
+img.alliance_logo_labtech_lp,
+img.alliance_logo_microsoft_lp,
+img.alliance_logo_netapp_lp,
+img.alliance_logo_vmware_lp,
+img.alliance_logo_purestorage_lp,
+img.alliance_logo_nutanix_lp,
+img.alliance_logo_exagrid_lp,
+img.alliance_logo_quantum_lp {
+    width: 159.58px;
+    height: 60px
+}
+
+img.alliance_logo_hpe_lp,
+img.alliance_logo_ibm_lp,
+img.alliance_logo_aws_lp {
+    width: 133.33px;
+    height: 60px
+}
+
+img.alliance_logo_nimble_lp {
+    width: 171.55px;
+    height: 60px
+}
+
+img.alliance_logo_lenovo_lp {
+    width: 151.69px;
+    height: 60px
+}
+
+img.veeam_vanguard {
+    width: 203.33px;
+    height: 50px
+}
+
+img.veeam_partner_academy {
+    width: 223.2px;
+    height: 50px
+}
+
+img.veeam_propartner_awards {
+    width: 238.48px;
+    height: 50px
+}
+
+img.veeam_technical_expert_club {
+    width: 229.62px;
+    height: 50px
+}
+
+img.veeam_cloud_connection {
+    width: 230.09px;
+    height: 50px
+}
+
+img.veeam_n2ws_logo {
+    width: 116.36px;
+    height: 60px
+}
+
+@media screen and (max-width: 480px) {
+    img.veeam_logo_lp,
+    img.veeam_logo_slogan_lp {
+        width: 142.59px;
+        height: 25px
+    }
+    img.slogan_lp,
+    img.n1_veeam,
+    img.n1_o365 {
+        display: none !important
+    }
+    img.veeam_propartner_logo_lp {
+        width: 80.02px;
+        height: 35px
+    }
+    img.vcsp_logo,
+    img.vcsp_slogan_logo {
+        width: 197.92px;
+        height: 20px
+    }
+    img.veeam_live_whiteboard_lp {
+        width: 126.69px;
+        height: 35px
+    }
+    img.vug_logo {
+        width: 126.34px;
+        height: 35px
+    }
+    img.veeam_analyst_summit {
+        width: 180px;
+        height: 34.41px
+    }
+    img.logo_veeam_alliance_partner_program {
+        width: 89.47px;
+        height: 45px
+    }
+    img.alliances_logo_lp,
+    img.alliance_logo_cisco_lp,
+    img.alliance_logo_dellemc_lp,
+    img.alliance_logo_labtech_lp,
+    img.alliance_logo_microsoft_lp,
+    img.alliance_logo_netapp_lp,
+    img.alliance_logo_vmware_lp,
+    img.alliance_logo_purestorage_lp,
+    img.alliance_logo_nutanix_lp,
+    img.alliance_logo_exagrid_lp,
+    img.alliance_logo_quantum_lp {
+        width: 119.69px;
+        height: 45px
+    }
+    img.alliance_logo_hpe_lp,
+    img.alliance_logo_ibm_lp,
+    img.alliance_logo_aws_lp {
+        width: 100px;
+        height: 45px
+    }
+    img.alliance_logo_nimble_lp {
+        width: 128.66px;
+        height: 45px
+    }
+    img.alliance_logo_lenovo_lp {
+        width: 113.77px;
+        height: 45px
+    }
+    img.veeam_vanguard {
+        width: 142.33px;
+        height: 35px
+    }
+    img.veeam_partner_academy {
+        width: 156.25px;
+        height: 35px
+    }
+    img.veeam_propartner_awards {
+        width: 166.94px;
+        height: 35px
+    }
+    img.veeam_technical_expert_club {
+        width: 160.73px;
+        height: 35px
+    }
+    img.veeam_cloud_connection {
+        width: 161.06px;
+        height: 35px
+    }
+    img.veeam_n2ws_logo {
+        width: 87.27px;
+        height: 45px
+    }
+}
+
+.g-cta {
+    text-align: center
+}
+
+.g-cta__btn-primary {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 12px 30px 10px;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    border: 0 none;
+    outline: 0;
+    background: #00b336;
+    border-radius: 99999px;
+    transition: background .15s ease-in-out
+}
+
+.g-cta__btn-primary:hover {
+    background: #00c73c;
+    text-decoration: none
+}
+
+.g-cta__btn-primary:active {
+    background: #009E30
+}
+
+.footer-v2 {
+    box-sizing: border-box;
+    padding: 40px 15px;
+    background: #414042
+}
+
+.footer-v2 a {
+    color: #fff;
+    text-decoration: none
+}
+
+.footer-v2 a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-v2 .footer {
+    box-sizing: border-box;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
+    font-size: 16px;
+    color: #fff
+}
+
+.footer-v2 .footer section {
+    box-sizing: border-box;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.footer-v2 .footer .footer__communities {
+    width: 300px
+}
+
+.footer-v2 .footer__title {
+    color: #ababab;
+    text-transform: uppercase;
+    margin-bottom: 22px
+}
+
+.footer-v2 .footer__resourses-links {
+    margin-bottom: 45px;
+    max-width: 400px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.footer-v2 .footer__resourses-links p {
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 10%;
+    width: 50%;
+    font-size: inherit
+}
+
+.footer-v2 .footer__resourses-links a {
+    white-space: nowrap
+}
+
+.footer-v2 .footer__communities-links {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.footer-v2 .footer__communities-links a {
+    color: #D9D9D9;
+    font-size: 24px;
+    transition: all ease-out .3s
+}
+
+.footer-v2 .footer__communities-links a:hover {
+    color: #b3b3b3
+}
+
+.footer-v2 .footer__copyright {
+    font-size: 13.5px;
+    color: #8d8d8d
+}
+
+.footer-v2 .footer__copyright a {
+    color: #8d8d8d;
+    white-space: nowrap
+}
+
+.footer-v2 .footer__copyright a:hover {
+    color: #8d8d8d
+}
+
+@media screen and (max-width: 768px) {
+    .footer-v2 {
+        padding: 60px 15px 70px
+    }
+    .footer-v2 .footer__resourses .footer__title {
+        display: none
+    }
+    .footer-v2 .footer .footer__communities {
+        display: table-header-group;
+        width: auto
+    }
+    .footer-v2 .footer__communities-links {
+        margin: 0 auto 45px;
+        max-width: 300px
+    }
+    .footer-v2 .footer .footer__resourses {
+        display: table-footer-group
+    }
+    .footer-v2 .footer__resourses-links {
+        margin: 0 auto 45px;
+        max-width: 300px;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-flex-direction: column;
+        flex-direction: column
+    }
+    .footer-v2 .footer__resourses-links p {
+        margin-bottom: 18px;
+        padding-right: 0;
+        width: auto
+    }
+    .footer-v2 .footer__resourses-links p:last-child {
+        margin-bottom: 0
+    }
+    .footer-v2 .footer__title,
+    .footer__resourses-links,
+    .footer-v2 .footer__copyright {
+        text-align: center
+    }
+}
+
+.plain-html-wrapper .footer-v2 .footer {
+    background: none;
+    padding: 0
+}
+
+@media (max-width: 1024px) {
+    .plain-html-wrapper .footer-v2 .footer {
+        padding: 0
+    }
+}
+
+@media (max-width: 767px) {
+    .plain-html-wrapper .footer-v2 .footer {
+        padding: 0
+    }
+}
+
+.footer-v3 {
+    box-sizing: border-box;
+    padding: 30px 15px;
+    color: #999;
+    background: #F1F1F1
+}
+
+.footer-v3 a {
+    color: #999;
+    text-decoration: none
+}
+
+.footer-v3 a:hover {
+    text-decoration: underline
+}
+
+.footer-v3 .footer {
+    box-sizing: border-box;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1170px;
+    background: none
+}
+
+.footer-v3 .footer__section {
+    box-sizing: border-box
+}
+
+.footer-v3 .footer__section:last-child {
+    padding: 0 0 0 30px;
+    flex-basis: 250px
+}
+
+.footer-v3 .footer__copyright {
+    text-align: left;
+    font-size: 14px
+}
+
+.footer-v3 .footer__communities-links {
+    margin: 0 auto;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.footer-v3 .footer__communities-links a {
+    color: #58595B;
+    font-size: 28px
+}
+
+.footer-v3 .footer__communities-links a i {
+    transition: all ease-out .3s
+}
+
+.footer-v3 .fa-twitter:hover {
+    color: #02BCEA
+}
+
+.footer-v3 .fa-facebook:hover {
+    color: #3C5A99
+}
+
+.footer-v3 .fa-linkedin:hover {
+    color: #01649B
+}
+
+.footer-v3 .fa-weibo:hover {
+    color: #D82829
+}
+
+.footer-v3 .fa-weixin:hover {
+    color: #2DC100
+}
+
+.footer-v3 .fa-youtube:hover,
+.footer-v3 .fa-youtube-play:hover {
+    color: #FF0000
+}
+
+.footer-v3 .fa-youtube-play {
+    font-size: 90%
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-v3 {
+        padding: 30px 15px 70px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-v3 {
+        text-align: center
+    }
+    .footer-v3 .footer {
+        flex-wrap: wrap
+    }
+    .footer-v3 .footer__section {
+        flex-basis: 100% !important
+    }
+    .footer-v3 .footer__section:first-child {
+        order: 2
+    }
+    .footer-v3 .footer__section:last-child {
+        width: auto;
+        padding: 0 0 40px;
+        margin: 0 auto;
+        max-width: 250px;
+        order: 1
+    }
+    .footer-v3 .footer__copyright {
+        text-align: center
+    }
+    .footer-v3 .footer__copyright-first-line {
+        display: block
+    }
+}
+
+.g-list {
+    list-style: none
+}
+
+.g-list:not(:last-child) {
+    margin-bottom: 30px
+}
+
+.g-list__item {
+    margin-left: 23px;
+    position: relative
+}
+
+.g-list__item:not(:last-child) {
+    margin-bottom: 16px
+}
+
+.g-list__item .g-list {
+    margin-top: 16px
+}
+
+.g-list--clr_white {
+    color: #fff
+}
+
+.g-list--clr_white .g-list__item::before {
+    background: #fff;
+    border-color: #fff
+}
+
+.g-list--clr_white .g-list__item .g-list__item .g-list__item::before {
+    background: #fff
+}
+
+.g-list__item::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    left: -23px;
+    top: 7px;
+    background: #232323;
+    opacity: 0.75;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid #232323
+}
+
+.g-list__item .g-list__item::before {
+    background: transparent
+}
+
+.g-list__item .g-list__item .g-list__item::before {
+    border-radius: 0;
+    background: #232323
+}
+
+.g-dark-block a {
+    color: #93EA20
+}
+
+.g-dark-block .g-cta__btn-primary {
+    color: #005F4B;
+    background: #93EA20
+}
+
+.g-dark-block .g-cta__btn-primary:hover {
+    background: #A0FF23
+}
+
+.g-dark-block .g-cta__btn-primary:active {
+    background: #83D11D
+}
