@@ -71,12 +71,11 @@ _GDPRText= {
     en: {
         privacy_policy: 'By registering you agree to the&nbsp;<a href="#" target="_blank">Privacy Policy</a>.', optout: "I want to receive product news and&nbsp;updates."
     }
-    
 }
 
 ,
 _selectCountry= {
-    en: "Select country/region"
+    en: "Select country/region", de: "Wählen Sie Ihr Land / Ihre Region aus", fr: "Sélectionnez un pays/une région", tr: "Ülke/bölge seçin", it: "Seleziona il paese/la regione", es: "Seleccione país/región", nl: "Selecteer land/regio", hu: "Ország/Régió kiválasztása", sw: "Select country/region", fi: "Select country/region", da: "Select country/region", no: "Select country/region", cz: "Vybrat zemi/oblast", ru: "Выбрать страну/регион", pl: "Wybierz kraj/region", "latam-es": "Seleccionar país/región", "latam-br": "Selecionar país/região", cn: "选择国家/地区", jp: "国または地域を指定する", tc: "選擇國家/地區", th: "เลือกประเทศ/ภูมิภาค", ko: "국가/지역 선택"
 }
 
 ;
@@ -88,7 +87,7 @@ function showError(e, a, t) {
 function followUp(e, a, t, i) {
     if(0==a.indexOf("#"))return $("#download-link").attr("href", i),
     $(e).slideUp(),
-    $("#ty").slideDown(),
+    $("#marketo-ty").slideDown(),
     1==$(".mForm").length&&$("html, body").animate( {
         scrollTop: $(e).offset().top-50
     }
@@ -177,33 +176,7 @@ $(document).ready(function() {
     ), $('input[type="number"]').on("focusout", function() {
         parseInt($(this).val(), 10)<parseInt($(this).attr("min"), 10)?$(this).val($(this).attr("min")): parseInt($(this).val(), 10)>parseInt($(this).attr("max"), 10)&&$(this).val($(this).attr("max"))
     }
-    ), 0<$('select[name="country"]').length) {
-        var a="#/";
-        $.ajax( {
-            url:a+"get-countries-list", success:function(e) {
-                var t="", i="";
-                $.each(e, function(e, a) {
-                    i=""!=a.country_local_name?" ("+a.country_local_name+")": "", t+='<option value="'+a.code3+'">'+a.country_name+i+"</option>"
-                }
-                ), $('select[name="country"]').html(t).prepend($('<option value="" disabled selected>'+_selectCountry[_formLang]+"</option>")), $.ajax( {
-                    url:a+"get-country-code3", xhrFields: {
-                        withCredentials: !0
-                    }
-                    , success:function(e) {
-                        "NULL"!=e.code&&$('select[name="country"]').each(function() {
-                            $(this).eq(0).val(e.code).change()
-                        }
-                        )
-                    }
-                }
-                )
-            }
-            , error:function() {
-                return $('select[name="country"]').parents(".mForm__row").remove(), $('select[name="country"]').parents(".mForm__oneLine-item").remove(), !1
-            }
-        }
-        )
-    }
+    ), 0<$('select[name="country"]').length)
     var t, i;
     "de"==_formLang&&0<$('input[name="private_policy_check"]').length?$('input[name="private_policy_check"]').next("label").html(_GDPRText.de.privacy_policy):(t=_formLang, $(".mForm").each(function(e) {
         $(this).find("label.private_policy_label").length<=0&&$(this).find('input[name="form_type"]').after('<div class="mForm__policy"><div class="mForm__row"><label class="private_policy_label">'+_GDPRText[t].privacy_policy+"</label></div></div>"), $(this).find('input[name="form_type"]').before('<input type="hidden" name="private_policy_check" value="1">')

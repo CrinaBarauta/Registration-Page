@@ -52,18 +52,21 @@
                     <form class="mForm mForm--white">
                         <h2 class="mForm__title content__h4">Register to&nbsp;download</h2>
                         <div class="mForm__row">
-                            <input type="text" name="first_name" placeholder="First name*" value="" data-validators="required,name"/>
+                            <input type="text" name="first_name" placeholder="First name*" value="" data-validators="required,name" progressive-profiling="true" />
                         </div>
                         <div class="mForm__row">
-                            <input type="text" name="last_name" placeholder="Last name*" value="" data-validators="required,name"/>
+                            <input type="text" name="last_name" placeholder="Last name*" value="" data-validators="required,name" progressive-profiling="true" />
                         </div>
                         <div class="mForm__row">
                             <input type="text" name="email" placeholder="Business email*" value="" data-validators="required,email,business" />
                         </div>
 
+
+                        <input type="hidden" name="form_type" value="resource_access" />
                         <input type="hidden" name="ty" value="#" />
                         <button class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit">DOWNLOAD NOW</span></button>
                     </form>
+
                     <div id="ty" class="success">
                         <h2 class="success__text">Thank you for&nbsp;your interest!</h2>
                         <div class="g-dark-block text_center">
