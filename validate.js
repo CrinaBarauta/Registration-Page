@@ -119,9 +119,9 @@ Validator.utils = function(a) {
             var a = window.location.host.split(".");
             return 3 === a.length && (-1 !== a.indexOf("staging") || -1 !== a.indexOf("staging2")) || "local" === a.pop() && -1 !== a.indexOf("") && -1 === a.indexOf("my") ? "" : "#"
         }
-        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$";
+        var c = "^(?!.*[\\.-][\\.-])(?!.*--)(\\w+[\\w\\.+-]*)@([\\w-]+\\.)+[^\\W_]{2,}$",
         this.addRules({
-            required: function(b) {
+            required: function(b, c, d, e) {
                 var f = d.name || "",
                     g = d.type,
                     h = d.value;
@@ -132,9 +132,6 @@ Validator.utils = function(a) {
                 return new RegExp("^(?!is+\\srequired)(\\S)", "i").test(h.trim())
             },
             email: d,
-            emailoptional: {
-                pattern: "(" + c + ")|^$"
-            },
             phone: f,
             business: e,
             companyRequiredForBusinessEmail: e,
