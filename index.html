@@ -2,13 +2,39 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Registration Page Crina Barauta</title>
     <link rel="shortcut icon" href="crina_barauta.jfif"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link rel="stylesheet" type="text/css" href="general.css"/>
     <script type="text/javascript" src="general.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            </script>
 </head>
 
 
@@ -41,7 +67,7 @@
 
                 </div>
                 <p class="header__sup">Lorem Ipsum</p>
-                <h1 class="header__title"><span class="title__hightlight">3</span> standard Lorem Ipsum passage,<br> used since the 1500s
+                <h1 class="header__title">The standard <span class="title__hightlight">Lorem Ipsum</span> passage
                 </h1>   
                 <h3 class="content__h3">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h3>
 
@@ -150,27 +176,23 @@
         <div class="footer">
             <section class="footer__section">
                 <div class="footer__copyright">
-                    <span class="footer__copyright-first-line">©2019 Veeam<sup>®</sup> Software</span><span
-                        class="hide768">  |  </span><a href="https://www.veeam.com/privacy-policy.html"
-                                                       target="_blank">Privacy Policy &&nbsp;Cookies</a>  |
-                    <a href="https://www.veeam.com/eula.html"
-                       target="_blank">EULA</a>  |
-                    <a href="https://www.veeam.com/licensing-policy.html"
-                       target="_blank">Licensing Policy</a>
+                    <span class="footer__copyright-first-line">©2019 ABC<sup>®</sup> Software</span><span
+                        class="hide768">  |  </span><a href="#"
+                                                       target="_blank">Privacy Policy &&nbsp;Cookies</a> 
                 </div>
             </section>
             <section class="footer__section">
                 <div class="footer__communities-links">
-                    <a href="https://twitter.com/veeam" target="_blank">
+                    <a href="#" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
-                    <a href="https://www.facebook.com/VeeamSoftware" target="_blank">
+                    <a href="#" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/veeam-software/" target="_blank">
+                    <a href="#/" target="_blank">
                         <i class="fa fa-linkedin"></i>
                     </a>
-                    <a href="https://www.youtube.com/user/YouVeeam" target="_blank">
+                    <a href="#" target="_blank">
                         <i class="fa fa-youtube"></i>
                     </a>
                 </div>
