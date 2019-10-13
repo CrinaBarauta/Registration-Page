@@ -223,7 +223,7 @@
     <!-- TY Message -->
     <script>
         $(document).ready(function(){
-            $('#download').submit(function(e){
+            $('#download').on('click', function(){
                 $('#myForm').hide();
                 $('#ty').show();
             });
