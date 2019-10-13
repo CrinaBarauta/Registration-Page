@@ -222,9 +222,11 @@
   crossorigin="anonymous"></script>
     <!-- TY Message -->
     <script>
-        $(#download).submit(function(event){
-            $('#myForm').hide();
+        $(document).ready(function(){
+            $('#download').submit(function(e){
+                $('#myForm').hide();
                 $('#ty').show();
+            });
         });
         </script>
 
