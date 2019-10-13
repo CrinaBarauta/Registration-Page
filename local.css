@@ -203,12 +203,12 @@ header a {
     .preheader__table .preheader__td {
         display: block;
         text-align: center;
-        display: none;
     }
 
     .preheader__table .preheader__td:last-child {
         text-align: center;
         margin-top: 33px;
+        display: none;
     }
 
     .header__sup {
