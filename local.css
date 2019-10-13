@@ -1,10 +1,6 @@
 body {
     color: #765996;
 }
-#footer {
-    z-index: 10;
-    position: relative;
-}
 
 .mktoForm,
 .mktoForm .mktoButtonRow,
@@ -679,3 +675,18 @@ header a {
   }
 
 /* BUTTONS -- E*/
+
+/* Footer-- s */
+#footer {
+    z-index: 10;
+    position: relative;
+}
+.footer-v3 a{
+color: #fff !important;
+}
+
+.footer-v3 {
+    color: #fff !important;
+    background-image: linear-gradient(to right bottom, rgb(30, 115, 172), rgba(142, 57, 153, 0.6)), url(https://media.giphy.com/media/3o7TKolyPUm9BhVwiY/giphy.gif) !important;
+    }
+/* Footer-- e */
