@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Registration Page Crina Barauta</title>
+    <link rel="shortcut icon" href="crina_barauta.jfif"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="general.css"/>
+    <script type="text/javascript" src="general.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        <!-- Scroll up -->
+    <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            </script>
+
+            
+
+
+</head>
+
+
+<body>
+<div class="wrap_content">
+
+
+
+    <!--CONTENT S-->
+<link rel="stylesheet" type="text/css" href="form.css" />
+
+<link rel="stylesheet" type="text/css" href="local.css" />
+
+<header class="header">
+    <div class="wrapper header__content">   
+        
+        <div class="header-flex">
+            <section class="header-flex__item">
+                <div class="preheader__table">
+                    <section class="preheader__td">
+                        <a href="#" target="_blank">
+                            <img class="logo_lp" src="logo_abc.png">
+                        </a>
+                    </section>
+                    <section class="preheader__td">
+                        <a href="#" target="_blank">
+                            <img class="idc__logo" src="">
+                        </a>
+                    </section>
+
+                </div>
+                <p class="header__sup">Lorem Ipsum</p>
+                <h1 class="header__title">The standard <span class="title__hightlight">Lorem Ipsum</span> passage
+                </h1>   
+                <h3 class="content__h3">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h3>
+
+
+            </section>
+            <section class="header-flex__item form__position">
+                <div id="toForm" class="form-wrapper z-index-10">
+                    <form class="mForm mForm--white" id="myForm">
+                        <h2 class="mForm__title content__h4">Register to&nbsp;download</h2>
+                        <div class="mForm__row">
+                            <input type="text" name="first_name" placeholder="First name*" value="" id="firstName"/>
+                        </div>
+                                <p class="error_form" id="firstName_error_message"></p>
+                        <div class="mForm__row">
+                            <input type="text" name="last_name" placeholder="Last name*" value="" id="lastName"/>
+                        </div>
+                        <p class="error_form" id="lastName_error_message"></p>
+                        <div class="mForm__row">
+                            <input type="text" name="email" placeholder="Business email*" value="" id="email"/>
+                        </div>
+                        <p class="error_form" id="email_error_message"></p>
+                        <div class="mForm__policy"><div class="mForm__row"><input class="mForm__row-checkbox" type="checkbox" name="subscribe" id="subscribe0" value=""><label class="mForm__row-checkbox" for="subscribe0">I want to receive product news and&nbsp;updates.</label></div></div>
+                        <div class="mForm__policy"><div class="mForm__row"><label class="private_policy_label">By registering you agree to the&nbsp;<a href="#" target="_blank">Privacy Policy</a>.</label></div></div>
+
+                        <input type="hidden" name="ty" value="#" />
+                        <button id="download" class="mSubmit mForm__btn-green" type="submit" name="SubmitForm" data-validators="submit" disabled >DOWNLOAD NOW</button>
+                    </form>
+                                 
+                    <div id="ty" class="success">
+                            <h2 class="success__text">Thank you for&nbsp;your interest!</h2>
+                            <div class="text_center">
+                                <a class="btn btn-white btn-animation-1" href="crina_barauta.pdf" target="_blank">DOWNLOAD NOW</a> 
+                            </div>
+                        </div>
+                    
+
+                </div>
+            </section>
+        </div>
+    </div>
+</header>
+
+<div class="z-index-10 bg__white">
+
+    <div class="content">
+
+    <p class="content__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+    <h2 class="content__h2">Contrary to popular belief, Lorem Ipsum is not simply random text</h2>
+
+        <div class="flex">
+
+            <div class="flex-300 text_center"> 
+                <span class="green__highlight">43%</span>
+                <h5 class="content__h5">What is Lorem Ipsum</h5>
+            </div>
+
+            <div class="flex-300 text_center"> 
+                <span class="green__highlight">84%</span>
+                <h5 class="content__h5">Where does it come from</h5>
+            </div>
+            <div class="flex-300 text_center"> 
+                <span class="green__highlight">70%</span>
+                <h5 class="content__h5">Why do we use it</h5>
+            </div>
+            <div class="flex-300 text_center"> 
+                <span class="green__highlight">65%</span>
+                <h5 class="content__h5">Where can I get some</h5>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="bg__grey"> 
+        <div class="content">
+
+            <div class="flex-block">
+                <div class="top-flex top-img">
+    
+                    <div>
+                        <a href="#toForm" class="js-g-scroll">
+                            <section>
+                                <div>
+                                    <img src="cover.png" alt="">
+    
+                                </div>
+    
+                            </section>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="top-flex">
+                    <h2 class="content__h2">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. </h2>
+                    <div class="g-cta">
+                            <a href="#toForm" class="btn btn-white btn-animation-1">DOWNLOAD NOW</a> 
+                        </div>
+                    
+    
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<footer id="footer">
+    <div class="footer-v3">
+        <div class="footer">
+            <section class="footer__section">
+                <div class="footer__copyright">
+                    <span class="footer__copyright-first-line">©2019 ABC<sup>®</sup></span><span
+                        class="hide768">  |  </span><a href="#"
+                                                       target="_blank">Privacy Policy &&nbsp;Cookies</a> 
+                </div>
+            </section>
+            <section class="footer__section">
+                <div class="footer__communities-links">
+                    <a href="#" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
+
+
+    <!--CONTENT E-->
+
+
+</div>
+
+<script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+    <!-- TY Message -->
+    <script>
+            $('#myForm').submit(function(event){
+                event.preventDefault();
+                $('#myForm').hide();
+                $('#ty').show();
+                
+            });
+
+        </script>
+
+        <script>
+           
+        </script>
+</body>
+</html>

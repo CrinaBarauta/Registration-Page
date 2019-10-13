@@ -1,4 +1,6 @@
-
+body {
+    color: #765996;
+}
 #footer {
     z-index: 10;
     position: relative;
@@ -86,7 +88,6 @@ header a {
 
 .header-flex .header-flex__item:first-child {
     margin-right: 30px;
-    width: 745px;
 }
 
 
@@ -375,6 +376,19 @@ header a {
     }
 }
 
+.error_form {
+	font-size: 15px;
+    color: #93EA20;
+    margin-bottom: 14px !important;
+    text-align: left;
+    display: none;
+}
+
+.mForm__btn-green:disabled {
+    opacity: 0.5 !important;
+    background: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6)) !important;
+}
+
 /* FORM -- E*/
 
 /* CONTENT -- S*/
@@ -479,8 +493,7 @@ header a {
 }
 
 .green__highlight {
-    display: block;
-    color: #00B336;
+    color: #47167d;
     margin-top: 10px;
     margin-bottom: 0px;
     font-style: italic;
@@ -584,24 +597,85 @@ header a {
 /* CONTENT -- E*/
 
 /* BUTTONS -- S*/
-.g-cta {
-    text-align: left;
-    }
     
     .success .g-cta {
     max-width: 300px;
     margin: 40px auto;
     }
 
-@media screen and (max-width: 1046px) {
-    .g-cta {
-        text-align: center;
-    }
-}
+.mForm__btn-green {color: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6))}
+.mForm__btn-green{color: #fff;background: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6))}
+.mForm__btn-green:hover{background:linear-gradient(to left bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6))}
+.mForm__btn-green:active{background: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6))}
 
-.mForm__btn-green {color: #93EA20}
-.mForm__btn-green{color: #005F4B;background: #93EA20}
-.mForm__btn-green:hover{background: #A0FF23}
-.mForm__btn-green:active{background: #83D11D}
+/* Button pink */
+
+  .btn:link,
+  .btn:visited{
+    text-decoration: none;
+    text-transform:uppercase;
+    position:relative;
+    top:0;
+    left:0;
+    padding:15px 40px;
+    border-radius:100px;
+    display:inline-block;
+    transition: all .5s;
+  }
+  
+  .btn-white{
+    background: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6));
+    color:#fff;
+    font-weight: bold;
+  }
+  
+  .btn:hover{
+     box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+     transform : translateY(-3px);
+  }
+  
+  .btn:active{
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    transform:translateY(-1px);
+  }
+  
+  .btn-bottom-animation-1{
+    animation:comeFromBottom 1s ease-out .8s;
+  }
+  
+  .btn::after{
+    content:"";
+    text-decoration: none;
+    text-transform:uppercase;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius:100px;
+    display:inline-block;
+    z-index:-1;
+    transition: all .5s;
+  }
+  
+  .btn-white::after {
+      background: linear-gradient(to right bottom, rgb(226, 169, 57), rgba(255, 18, 251, 0.6));
+  }
+  
+  .btn-animation-1:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+  }
+  
+  @keyframes comeFromBottom{
+    0%{
+      opacity:0;
+      transform:translateY(40px);
+    } 
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
 
 /* BUTTONS -- E*/
